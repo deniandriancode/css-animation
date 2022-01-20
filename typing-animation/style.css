@@ -1,0 +1,89 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: monospace;
+	width: 100vw;
+	height: 100vh;
+	font-size: 18px;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.container {
+	width: 100%;
+	max-width: 700px;
+	height: 100px;
+	padding: 15px;
+	margin: 20px auto;
+	display: flex;
+	justify-content: center;
+	margin: 30px auto;
+}
+
+.btn-container {
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	padding: 5px 12px;
+	border: 2px solid lightskyblue;
+	color: white;
+	background-color: #008fef;
+	border-radius: 5px;
+	user-select: none;
+	font-size: 15px;
+}
+
+button:active {
+	background-color: #006fef;
+}
+
+.filler {
+	color: transparent;
+}
+
+.text-container {
+	position: relative;
+	width: 100%;  /* width: fit-content to start typing from center if used alongside with text-align: center */
+	/* text-align: center; */
+	text-align: justify;
+	height: fit-content;
+}
+
+.filler {
+	position: relative;
+}
+
+.filler::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translateY(-50%);
+	height: 100%;
+	width: 2px;
+	background-color: black;
+	animation: blink 1s infinite;
+}
+
+
+@keyframes blink {
+	0% {
+		background-color: #000;
+	}
+	50% {
+		background-color: transparent;
+	}
+	100% {
+		background-color: #000;
+	}
+}
